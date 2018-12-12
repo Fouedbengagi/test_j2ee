@@ -1,4 +1,4 @@
-package comm.isamm;
+package com.isamm.servlets;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class myservlet
+ * Servlet implementation class servlet1
  */
-@WebServlet("/myservlet")
-public class myservlet extends HttpServlet {
+@WebServlet("/servlet1")
+public class servlet1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public myservlet() {
+    public servlet1() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +27,7 @@ public class myservlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		this.getServletContext().getRequestDispatcher("/page.jsp").forward(request, response);
 	}
 
 	/**
