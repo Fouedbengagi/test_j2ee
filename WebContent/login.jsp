@@ -7,8 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="filter">solution avec tags</a><br>
-<a href="redirectServlet?param=jstl"> solution avec jstl </a>
-
+page login
 </body>
 </html>
