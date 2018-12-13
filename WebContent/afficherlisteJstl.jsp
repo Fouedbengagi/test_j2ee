@@ -21,6 +21,9 @@
    </tr>
   </c:forEach>
 </table>
+<form action="LogoutServlet" method="post">
+<input type="submit" value="Logout" >
+</form>
 
 </body>
 </html>

@@ -30,17 +30,15 @@ public class AuthenticationFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		
 		String uri = req.getRequestURI();
-		this.context.log("Requested Resource::"+uri);
-		
 		HttpSession session = req.getSession(false);
 		
-		/*if(session == null && !(uri.endsWith("html") || uri.endsWith("LoginServlet"))){
-			this.context.log("Unauthorized access ");
-			res.sendRedirect("index.html");
-		}else{*/
+		if(session == null && !(uri.endsWith("html") || uri.endsWith("LoginServlet"))){
+		
+			res.sendRedirect("login.html");
+		}else{
 			// pass the request along the filter chain
 			chain.doFilter(request, response);
-		/*}*/
+		}
 		
 		
 	}

@@ -31,13 +31,14 @@ public class LoginServlet extends HttpServlet {
 		if(userID.equals(user) && password.equals(pwd)){
 			HttpSession session = request.getSession();
 			session.setAttribute("user", "foued");
-			//setting session to expiry in 30 mins
+			
 			session.setMaxInactiveInterval(30*60);
 			Cookie userName = new Cookie("user", user);
 			userName.setMaxAge(30*60);
 			response.addCookie(userName);
-			getServletConfig().getServletContext().getServlet("servlet1");
-		}else{
+			RequestDispatcher rd = request.getRequestDispatcher("servlet1");
+			rd.forward(request,response);		
+			}else{
 			RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
 			PrintWriter out= response.getWriter();
 			out.println("<font color=red>login ou mot de passe incorrecte.</font>");
