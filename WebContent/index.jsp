@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-hello
+<a href="servletIndex?param=filter">solution avec filter</a><br>
+<a href="servletIndex?param=jstl"> solution avec jstl </a>
+
 </body>
 </html>
