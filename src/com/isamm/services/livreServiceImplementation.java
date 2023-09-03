@@ -7,7 +7,7 @@ import comm.isamm.beans.livre;
 import comm.isamm.dao.livreDAO;
 
 public class livreServiceImplementation implements LivreInterface {
-	livreDAO l=new livreDAO();
+	livreDAO l=new livreDAO() ;
 
 
 	@Override
@@ -19,7 +19,7 @@ public class livreServiceImplementation implements LivreInterface {
 	@Override
 	public Boolean FindOne(String isbn) {
 		// TODO Auto-generated method stub
-		return l.FindOne(isbn)  ;
+		return l.FindOne(isbn);
 	}
 
 }
