@@ -19,7 +19,7 @@ public class livreServiceImplementation implements LivreInterface {
 	@Override
 	public Boolean FindOne(String isbn) {
 		// TODO Auto-generated method stub
-		return l.FindOne(isbn) ;
+		return l.FindOne(isbn)  ;
 	}
 
 }
